@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Mi Chat — PWA (Twilio)</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">Mi Chat</div>
+      <div class="controls">
+        <button id="darkToggle">🌓</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="login" id="login">
+        <h2>Iniciar con teléfono</h2>
+        <input id="phone" placeholder="+5211234567890" />
+        <button id="sendCodeBtn">Enviar código por SMS</button>
+
+        <div id="verifyBox" style="display:none;margin-top:12px;">
+          <input id="code" placeholder="Código recibido" />
+          <input id="name" placeholder="Tu nombre (para registro)" />
+          <input id="avatarFile" type="file" accept="image/*" />
+          <button id="verifyBtn">Verificar y registrar</button>
+        </div>
+
+        <div style="margin-top:10px;">
+          <small id="status"></small>
+        </div>
+      </div>
+
+      <section class="chat" id="chat" style="display:none;">
+        <aside class="profile">
+          <div class="profileCard">
+            <div id="profileAvatar" class="avatarLarge">AA</div>
+            <div id="profileName">Tu nombre</div>
+            <small id="statusText">Conectado (local)</small>
+          </div>
+        </aside>
+
+        <section class="panel">
+          <div id="mensajes" class="mensajes"></div>
+          <div class="inputBox">
+            <input id="texto" placeholder="Escribe un mensaje..." />
+            <button id="enviarBtn">Enviar</button>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+<script src="app.js"></script>
+<script>
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('/sw.js').then(()=> console.log('SW registered')).catch(()=>{});
+}
+</script>
+</body>
+</html>

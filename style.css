@@ -1,0 +1,17 @@
+:root{--bg:#eeeeef;--card:#fff;--accent:#2b8cff}
+body{font-family:Arial;margin:0;background:var(--bg)}
+.app{max-width:1100px;margin:18px auto;background:linear-gradient(180deg,#fff,#f7f8fb);border-radius:10px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,0.06)}
+.topbar{display:flex;justify-content:space-between;padding:10px 16px;background:var(--card);border-bottom:1px solid #eee}
+.login{padding:24px;display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.login input{padding:8px;border-radius:6px;border:1px solid #ccc}
+.login button{padding:8px 10px;border-radius:6px;border:0;background:var(--accent);color:#fff}
+.profile{width:220px;background:var(--card);border-right:1px solid #eee;padding:18px}
+.profileCard{display:flex;flex-direction:column;align-items:center;gap:8px}
+.avatarLarge{width:96px;height:96px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#ddd;font-size:28px;font-weight:700;overflow:hidden}
+.avatarLarge img{width:100%;height:100%;object-fit:cover}
+.panel{flex:1;display:flex;flex-direction:column}
+.mensajes{flex:1;padding:18px;overflow:auto;background:linear-gradient(180deg,#fbfdff,#f7f8fb)}
+.mensaje{max-width:70%;padding:10px;border-radius:12px;margin:8px 0;display:inline-block}
+.inputBox{display:flex;padding:12px;border-top:1px solid #eee;background:var(--card)}
+.inputBox input{flex:1;padding:10px;border-radius:8px;border:1px solid #ccc}
+.inputBox button{margin-left:8px;padding:10px 14px;border-radius:8px;border:0;background:var(--accent);color:#fff}
